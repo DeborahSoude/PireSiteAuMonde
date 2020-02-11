@@ -63,7 +63,7 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-    if (document.getElementById("nextBtn").innerText == "Envoyer") {
+    if (document.getElementById("nextStep").innerText == "Envoyer") {
         document.querySelector(".form-popup").style.display = "block";
     }
     var x, y, i, valid = true;
@@ -99,7 +99,6 @@ function fixStepIndicator(n) {
 document.querySelector('.ahOk').addEventListener("click", function () {
     document.querySelector("#regForm").style.display = "none";
 })
-
 
 function checkName() {
     let username = document.getElementById('inputName');
@@ -215,19 +214,13 @@ function localisyMe() {
 }
 
 
-    /* Ouvre 5 fois la fenêtre dans 5 ongets différents */
-    // btn.onclick = ;
-
+/* Ouvre 5 fois la fenêtre dans 5 ongets différents */
 function cancerClick() {
     // let btn = document.getElementById('cancerBtn');
     for (let i = 0; i <= 5; i++) {
         window.open('http://localhost:8080/PireSiteAuMonde/', '_blank');
     }
 }
-
-
-
-
 
 /* AJOUTER MUSIQUE */
 var myAudio = document.querySelector('#audioPlayer');
@@ -273,7 +266,6 @@ document.querySelector('.btn-nav4').addEventListener('click', function () {
 document.querySelector('.ok').addEventListener('click', function () {
     document.querySelector('.nav-popup').style.display = "none";
 })
-
 document.querySelector('.thanks').addEventListener('click', function () {
     document.querySelector('.nav-popup-yet').style.display = "none";
 })
