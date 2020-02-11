@@ -20,7 +20,7 @@ Le pire site du monde est un site qui...
     * Faire un form wizard pour chaque étape de l'inscription ( Nom = étape 1, prénom = étape 2 ) ...
     * Une foi tous les champs remplis, faire disparaitre le bouton 'valider'
     * formulaire qwerty
-    * Choisir un nom d'utilisateur de 38caractère, ni plus ni moins
+    * Choisir un nom d'utilisateur de 38caractère, ni plus ni moins /** OK **/
     * taper 2 fois son adresse mail
     * un champ où quand tu tapes une lettre une fois ça la tape 2 fois
 
