@@ -153,8 +153,8 @@ function suitsouris(evenement) {
         var x = evenement.pageX;
         var y = evenement.pageY;
     }
-    document.getElementById("image_suit_souris").style.left = (x + 45) + 'px';
-    document.getElementById("image_suit_souris").style.top = (y + 45) + 'px';
+    document.getElementById("image_suit_souris").style.left = (x + 25) + 'px';
+    document.getElementById("image_suit_souris").style.top = (y + 25) + 'px';
 
 }
 
