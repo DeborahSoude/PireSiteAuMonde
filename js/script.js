@@ -7,6 +7,10 @@ function init() {
     });
     setTimeout(stepWizard, 2000);
     notifyMe();
+    window.addEventListener("beforeunload", function (event) {
+        event.preventDefault();
+        event.returnValue = "";
+    });
 }
 
 function stepWizard() {
