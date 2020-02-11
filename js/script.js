@@ -114,7 +114,7 @@ function error(err) {
 function localisyMe() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(success, error, options);
-        alert('Vous êtes maintenant suivi :)')
+        var notification = new Notification('Vous êtes maintenant suivi :)')
 
 
     } else {
