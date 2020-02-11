@@ -5,6 +5,8 @@ function init() {
         e.preventDefault();
         stepWizard();
     });
+    setTimeout(toggleForm, 2000);
+    notifyMe();
 }
 
 function stepWizard() {
@@ -68,4 +70,61 @@ function suitsouris(evenement) {
     }
     document.getElementById("image_suit_souris").style.left = (x + 1) + 'px';
     document.getElementById("image_suit_souris").style.top = (y + 1) + 'px';
+
+}
+
+// Demande l'autorisation pour envoyer des notifications
+function notifyMe() {
+    // Vérifions si le navigateur prend en charge les notifications
+    if (!("Notification" in window)) {
+        alert("Votre navigateur ne supporte pas les notifications");
+    }
+
+    // Vérifions si les autorisations de notification ont déjà été accordées
+    else if (Notification.permission === "granted") {
+        // Si oui, on crée une notif
+        var notification = new Notification("Re coucou, toi !");
+    }
+
+    // Sinon, nous devons demander la permission à l'utilisateur
+    else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+            // Si l'utilisateur accepte, on crée une notification
+            if (permission === "granted") {
+                var notification = new Notification("T'es content d'avoir des notifications ? ");
+            }
+        });
+    }
+    localisyMe();
+}
+
+// Demande l'accès à la localisation 
+var options = {
+    enableHighAccuracy: true,
+    timeout: 2000,
+    maximumAge: 0
+};
+
+function success(pos) {
+    var crd = pos.coords;
+
+    console.info('Votre position actuelle est :');
+    console.info(`Latitude : ${crd.latitude}`);
+    console.info(`Longitude : ${crd.longitude}`);
+    var notification = new Notification(`Ta position actuelle est Latitude : ${crd.latitude}, Longitude : ${crd.longitude}`)
+}
+
+function error(err) {
+    console.warn(`ERREUR (${err.code}): ${err.message}`);
+}
+
+function localisyMe() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(success, error, options);
+        var notification = new Notification("Ta position est en cours d'enregistrement...")
+
+
+    } else {
+        var notification = new Notification("Tant pis pour toi.");
+    }
 }
