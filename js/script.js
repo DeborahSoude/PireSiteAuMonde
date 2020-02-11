@@ -149,7 +149,7 @@ function localisyMe() {
 
 /* Ouvre 5 fois la fenêtre dans 5 ongets différents */
 let btn = document.querySelector('#cancerBtn');
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
     cancerClick()
 });
 
@@ -177,10 +177,32 @@ stop.addEventListener("click", function () {
 /* CHAMP UPLAOD */
 function showPreview(e) {
     let reader = new FileReader();
-    
+
     reader.readAsDataURL(e.files[0]);
     reader.onload = function () {
         var output = document.querySelector('#preview-upload');
         output.src = reader.result;
     }
 }
+
+/* POP UP NAVIGATION */
+document.querySelector('.btn-nav').addEventListener('click', function () {
+    document.querySelector('.nav-popup-yet').style.display = "block";
+})
+document.querySelector('.btn-nav2').addEventListener('click', function () {
+    document.querySelector('.nav-popup').style.display = "block";
+})
+document.querySelector('.btn-nav3').addEventListener('click', function () {
+    document.querySelector('.nav-popup').style.display = "block";
+})
+document.querySelector('.btn-nav4').addEventListener('click', function () {
+    document.querySelector('.nav-popup').style.display = "block";
+})
+
+document.querySelector('.ok').addEventListener('click', function () {
+    document.querySelector('.nav-popup').style.display = "none";
+})
+
+document.querySelector('.thanks').addEventListener('click', function () {
+    document.querySelector('.nav-popup-yet').style.display = "none";
+})
