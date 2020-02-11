@@ -26,11 +26,11 @@ function stepWizard() {
     let currentStep = document.getElementsByClassName('active');
 
     // if (currentStep.classList.contains('active')) {
-        // currentStep.next().toggleClass('active');
-        // currentStep.classList.remove('active');
+    // currentStep.next().toggleClass('active');
+    // currentStep.classList.remove('active');
     // }
-    
-    
+
+
 }
 
 
@@ -62,6 +62,7 @@ close.addEventListener("click", function () {
 function openModal() {
     document.querySelector('.popup-modal').style.display = "block";
 }
+
 function openNewModale() {
     document.querySelector('.exit').style.display = "block"
     document.querySelector('.no').addEventListener("click", function () {
@@ -70,7 +71,7 @@ function openNewModale() {
 
     document.querySelector('.yes').addEventListener("click", function () {
         document.querySelector('.popup-modal').style.display = "none";
-        setTimeout(openModal,1000);
+        setTimeout(openModal, 1000);
     });
 }
 
@@ -146,6 +147,7 @@ function localisyMe() {
     }
 }
 
+/* Ouvre 5 fois la fenêtre dans 5 ongets différents */
 let btn = document.querySelector('#cancerBtn');
 btn.addEventListener('click', function() {
     cancerClick()
@@ -157,3 +159,13 @@ function cancerClick() {
     }
 }
 
+/* CHAMP UPLAOD */
+function showPreview(e) {
+    let reader = new FileReader();
+
+    reader.readAsDataURL(e.files[0]);
+    reader.onload = function () {
+        var output = document.querySelector('#preview-upload');
+        output.src = reader.result;
+    }
+}
