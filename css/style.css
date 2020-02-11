@@ -1,3 +1,9 @@
+html,body {
+    background-color: lightCoral !important;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Comic Sans MS';
+}
 h1 {
     font-family: 'Monoton', cursive;
 }
@@ -6,5 +12,14 @@ p {
     font-family: 'Zhi Mang Xing', cursive;
 }
 #mainContainer {
-    margin-top: 100px;
+    background: white;
+    margin-top: 50px;
 }
+
+.hidden {
+    display: none;
+}
+
+
+
+/* STYLE FORMULAIRE */
