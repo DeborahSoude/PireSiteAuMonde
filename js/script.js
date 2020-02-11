@@ -1,4 +1,13 @@
 function init() {
+    window.addEventListener('load', () => {
+        let nbVisits = localStorage.getItem('nbvisits') || 0;
+        nbVisits++;
+        localStorage.setItem('nbvisits', nbVisits);
+
+        let spanCounter = document.getElementById('#visit-count');
+        // spanCounter.innerHTML += nbVisists;
+    });
+
     let form = document.getElementById('name-form');
     let nextStep = document.getElementById('nextStep');
     nextStep.addEventListener('click', (e) => {
@@ -6,7 +15,7 @@ function init() {
         stepWizard();
     });
     setTimeout(stepWizard, 2000);
-    notifyMe();
+    // notifyMe();
     window.addEventListener("beforeunload", function (event) {
         event.preventDefault();
         event.returnValue = "";
@@ -138,7 +147,9 @@ function localisyMe() {
 }
 
 let btn = document.querySelector('#cancerBtn');
-btn.onclick = cancerClick();
+btn.addEventListener('click', function() {
+    cancerClick()
+});
 
 function cancerClick() {
     for (let i = 0; i <= 5; i++) {
