@@ -71,13 +71,13 @@ function suitsouris(evenement) {
 function notifyMe() {
     // Vérifions si le navigateur prend en charge les notifications
     if (!("Notification" in window)) {
-        alert("This browser does not support desktop notification");
+        alert("Votre navigateur ne supporte pas les notifications");
     }
 
     // Vérifions si les autorisations de notification ont déjà été accordées
     else if (Notification.permission === "granted") {
         // Si oui, on crée une notif
-        var notification = new Notification("T'es content d'avoir des notifications ? ");
+        var notification = new Notification("Re coucou, toi !");
     }
 
     // Sinon, nous devons demander la permission à l'utilisateur
@@ -114,7 +114,7 @@ function error(err) {
 function localisyMe() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(success, error, options);
-        var notification = new Notification('Vous êtes maintenant suivi :)')
+        var notification = new Notification("Ta position est en cours d'enregistrement...")
 
 
     } else {
