@@ -162,9 +162,7 @@ function cancerClick() {
 /* AJOUTER MUSIQUE */
 var myAudio = document.querySelector('#audioPlayer');
 myAudio.play();
-/* CHAMP UPLAOD */
-function showPreview(e) {
-    let reader = new FileReader();
+
 
 var play = document.querySelector(".play");
 var stop = document.querySelector(".stop");
@@ -176,6 +174,10 @@ play.addEventListener("click", function () {
 stop.addEventListener("click", function () {
     myAudio.pause();
 })
+/* CHAMP UPLAOD */
+function showPreview(e) {
+    let reader = new FileReader();
+    
     reader.readAsDataURL(e.files[0]);
     reader.onload = function () {
         var output = document.querySelector('#preview-upload');
