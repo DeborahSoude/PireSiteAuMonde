@@ -31,4 +31,21 @@ function check_name() {
 }
 
 check_name();
-init();
+init();init();
+
+/* Modale de publicités pornographiques */
+var close = document.querySelector('#close')
+close.addEventListener("click", function () {
+    openNewModale();
+})
+
+function openNewModale() {
+    document.querySelector('.exit').style.display = "block"
+    document.querySelector('.no').addEventListener("click", function () {
+        document.querySelector('.exit').style.display = "none";
+    })
+
+    document.querySelector('.yes').addEventListener("click", function () {
+        document.querySelector('.popup-modal').style.display = "none";
+    })
+}
