@@ -298,3 +298,19 @@ input.invalid {
     margin: auto;
     padding: 1px 0;
 }
+
+/* MODALE BEST LIFE */
+.popup-bestLife {
+    max-width: 200px;
+    background: violet;
+    text-align: center;
+    border: 3px solid red;
+    padding: 15px;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+}
+
+.popup-bestLife img {
+    max-width: 180px;
+}
