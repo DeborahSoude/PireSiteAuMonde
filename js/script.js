@@ -50,15 +50,19 @@ close.addEventListener("click", function () {
     openNewModale();
 })
 
+function openModal() {
+    document.querySelector('.popup-modal').style.display = "block";
+}
 function openNewModale() {
     document.querySelector('.exit').style.display = "block"
     document.querySelector('.no').addEventListener("click", function () {
         document.querySelector('.exit').style.display = "none";
-    })
+    });
 
     document.querySelector('.yes').addEventListener("click", function () {
         document.querySelector('.popup-modal').style.display = "none";
-    })
+        setTimeout(openModal,1000);
+    });
 }
 
 /*Personaliser le curseur*/
