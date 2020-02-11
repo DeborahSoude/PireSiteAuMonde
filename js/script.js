@@ -76,8 +76,8 @@ function suitsouris(evenement) {
         var x = evenement.pageX;
         var y = evenement.pageY;
     }
-    document.getElementById("image_suit_souris").style.left = (x + 1) + 'px';
-    document.getElementById("image_suit_souris").style.top = (y + 1) + 'px';
+    document.getElementById("image_suit_souris").style.left = (x + 45) + 'px';
+    document.getElementById("image_suit_souris").style.top = (y + 45) + 'px';
 
 }
 

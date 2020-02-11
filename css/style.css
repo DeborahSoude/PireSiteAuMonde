@@ -4,6 +4,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Comic Sans MS';
+    cursor: url('../asset/witch.svg'), auto;
 }
 
 h1 {
@@ -23,6 +24,13 @@ p {
 
 .hidden {
     display: none;
+}
+
+#image_suit_souris {
+    position:absolute;
+    display:block;
+    z-index:5;
+    max-width:30px;
 }
 
 /* STYLE MODALE */
