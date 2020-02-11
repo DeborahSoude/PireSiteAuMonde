@@ -46,7 +46,7 @@
 
     <!-- One "tab" for each step in the form: -->
     <div class="tab">Nom Prénom:
-      <p><input placeholder="Dupont" oninput="this.className = ''"></p>
+      <p><input placeholder="Dupont" id="inputName" oninput="this.className = ''"></p>
       <p><input placeholder="Jean-Yves" oninput="this.className = ''"></p>
     </div>
 
@@ -69,7 +69,7 @@
     <div style="overflow:auto;">
       <div style="float:right;">
         <button type="button" id="prevBtn" onclick="nextPrev(-1)">Précédent</button>
-        <button type="button" id="nextBtn" onclick="nextPrev(1)">Suivant</button>
+        <button type="button" id="nextStep" onclick="nextPrev(1)">Suivant</button>
       </div>
     </div>
 
@@ -165,10 +165,6 @@
             <button type="button" class="yes">Oui</button>
           </div>
         </div>
-
-
-
-
       </div>
 
 

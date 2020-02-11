@@ -14,7 +14,7 @@ function init() {
         e.preventDefault();
         stepWizard();
     });
-    setTimeout(stepWizard, 2000);
+
     notifyMe();
     window.addEventListener("beforeunload", function (event) {
         event.preventDefault();
@@ -35,9 +35,9 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Envoyer";
+        document.getElementById("nextStep").innerHTML = "Envoyer";
     } else {
-        document.getElementById("nextBtn").innerHTML = "Suivant";
+        document.getElementById("nextStep").innerHTML = "Suivant";
     }
     // ... and run a function that displays the correct step indicator:
     fixStepIndicator(n)
