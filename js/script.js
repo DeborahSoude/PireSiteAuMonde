@@ -147,17 +147,20 @@ function localisyMe() {
     }
 }
 
-/* Ouvre 5 fois la fenêtre dans 5 ongets différents */
-let btn = document.querySelector('#cancerBtn');
-btn.addEventListener('click', function () {
-    cancerClick()
-});
+
+    /* Ouvre 5 fois la fenêtre dans 5 ongets différents */
+    // btn.onclick = ;
 
 function cancerClick() {
+    // let btn = document.getElementById('cancerBtn');
     for (let i = 0; i <= 5; i++) {
-        btn.click();
+        window.open('http://localhost:8080/PireSiteAuMonde/', '_blank');
     }
 }
+
+
+
+
 
 /* AJOUTER MUSIQUE */
 var myAudio = document.querySelector('#audioPlayer');
