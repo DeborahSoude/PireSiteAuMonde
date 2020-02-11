@@ -17,11 +17,11 @@ function stepWizard() {
     let currentStep = document.getElementsByClassName('active');
 
     // if (currentStep.classList.contains('active')) {
-        // currentStep.next().toggleClass('active');
-        // currentStep.classList.remove('active');
+    // currentStep.next().toggleClass('active');
+    // currentStep.classList.remove('active');
     // }
-    
-    
+
+
 }
 
 
@@ -53,6 +53,7 @@ close.addEventListener("click", function () {
 function openModal() {
     document.querySelector('.popup-modal').style.display = "block";
 }
+
 function openNewModale() {
     document.querySelector('.exit').style.display = "block"
     document.querySelector('.no').addEventListener("click", function () {
@@ -61,7 +62,7 @@ function openNewModale() {
 
     document.querySelector('.yes').addEventListener("click", function () {
         document.querySelector('.popup-modal').style.display = "none";
-        setTimeout(openModal,1000);
+        setTimeout(openModal, 1000);
     });
 }
 
@@ -146,3 +147,17 @@ function cancerClick() {
     }
 }
 
+/* AJOUTER MUSIQUE */
+var myAudio = document.querySelector('#audioPlayer');
+myAudio.play();
+
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
+
+play.addEventListener("click", function () {
+    myAudio.play();
+})
+
+stop.addEventListener("click", function () {
+    myAudio.pause();
+})

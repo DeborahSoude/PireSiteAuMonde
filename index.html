@@ -17,29 +17,44 @@
 <body>
   <img src="./asset/shine.svg" alt="Image qui suit la souris" id="image_suit_souris" />
   <div id="form">
-  <form action="#" id="name-form">
-    <div class="form-group inputGroup active" id="firstStep">
-      <label for="inputName">Quel est ton nom ?</label> 
-      <input type="text" class="form-control" id="inputName" placeholder="Nom">
-    </div>
-    <div class="form-group inputGroup hidden" id="secondStep">
-      <label for="inputMail">Adresse mail</label>
-      <input type="email" class="form-control" id="inputMail" placeholder="Mail">
-    </div>   
+    <form action="#" id="name-form">
+      <div class="form-group inputGroup active" id="firstStep">
+        <label for="inputName">Quel est ton nom ?</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Nom">
+      </div>
+      <div class="form-group inputGroup hidden" id="secondStep">
+        <label for="inputMail">Adresse mail</label>
+        <input type="email" class="form-control" id="inputMail" placeholder="Mail">
+      </div>
 
 
-    <button class="btn" type="button">Reset</button>
-    <button id="nextStep" class="btn" type="button">Next</button>
-  </form>
-</div>
+      <button class="btn" type="button">Reset</button>
+      <button id="nextStep" class="btn" type="button">Next</button>
+    </form>
+  </div>
 
   <main id="mainContainer" class="container" role="main">
+    <form action="#" id="name-form">
+      <div class="form-group inputGroup active" id="firstStep">
+        <label for="inputName">Quel est ton nom ?</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Nom">
+      </div>
+      <div class="form-group inputGroup hidden" id="secondStep">
+        <label for="inputMail">Adresse mail</label>
+        <input type="email" class="form-control" id="inputMail" placeholder="Mail">
+      </div>
 
-    <a href="http://localhostz:8080/PireSiteAuMonde/" target="_blank" id="cancerBtn" type="button">Clique moi et vis ta meilleure vie</a>
+
+      <button class="btn btn-success" type="button">Reset</button>
+      <button id="nextStep" class="btn btn-danger" type="button">Next</button>
+    </form>
+
+    <a href="http://localhostz:8080/PireSiteAuMonde/" target="_blank" id="cancerBtn" type="button">Clique moi et vis ta
+      meilleure vie</a>
 
     <div class="visit-box">
       <h3><span id="visit-count">0</span>
-      visites aujourd'hui</h3>
+        visites aujourd'hui</h3>
     </div>
     <!-- <div class="form-group">
       <label for="inputMail">Adresse mail</label>
@@ -54,9 +69,33 @@
       <input type="text" class="form-control" id="inputDogName" placeholder="Nom de ton chien">
     </div> -->
 
+
+    <!-- Musique -->
+    <div class="popup-music">
+      <p>It's a small world</p>
+      <audio id="audioPlayer" src="./its-a-small-world-la-maison-des-poupees.mp3"></audio>
+      <button class="control play">►</button>
+      <button class="control stop"><i></i></button>
+    </div>
+
+    <<<<<<< Updated upstream <div class="popup-modal" data-popup-modal="one">
+      <p id="close"
+        style="padding: 5px; text-align: right; font-weight: bold; font-size: 20px; font-family:Arial, Helvetica, sans-serif">
+        X</p>
+      <div align="center">
+        <a href="#"><img src="http://media.thumbs-share.com/thumbs/p/O/m/pOmEUZh7OHo.jpg"></a>
+      </div>
+      =======
+      <!-- Modal d'upload d'image -->
+      <div class="popup-upload">
+        <p>Photo de profil</p>
+        <img src="" alt="" id="preview-upload">
+        <input type="file" class="custom-file-input" id="upload-img" name="upload-img" accept="image/png, image/jpg"
+          onchange="showPreview(this)">
+      </div>
+
+
       <!-- Modal de publicité -->
-
-
       <div class="popup-modal" data-popup-modal="one">
         <p id="close"
           style="padding: 5px; text-align: right; font-weight: bold; font-size: 20px; font-family:Arial, Helvetica, sans-serif">
@@ -75,16 +114,16 @@
 
         <div class="exit">
           <p>Êtes-vous sûr de vouloir laisser passer cette chance ? </p>
+          >>>>>>> Stashed changes
           <div>
             <button type="button" class="no">Non</button>
             <button type="button" class="yes">Oui</button>
           </div>
         </div>
-      </div>
-    </main>
+        <<<<<<< Updated upstream </main>=======</div> </main>>>>>>>> Stashed changes
 
 
-    <script src="js/script.js" type="text/javascript"></script>
+          <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 html,
 body {
-    background:rosybrown;
+    background: rosybrown;
     font-family: 'Comic Sans MS';
     cursor: url('../asset/witch.svg'), auto;
 }
@@ -28,10 +28,10 @@ p {
 }
 
 #image_suit_souris {
-    position:absolute;
-    display:block;
-    z-index:5;
-    max-width:30px;
+    position: absolute;
+    display: block;
+    z-index: 5;
+    max-width: 30px;
 }
 
 /* STYLE MODALE */
@@ -89,4 +89,41 @@ p {
 
 
 /* STYLE FORMULAIRE */
-#form {background:lightblue;}
+#form {
+    background: lightblue;
+}
+
+
+/*MODALE DE SON*/
+.popup-music {
+    background: green;
+    border: 2px solid #000;
+    max-width: 100px;
+    padding: 5px;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    text-align: center;
+}
+
+.popup-music .control {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 40px;
+    line-height: 0.8;
+}
+
+.popup-music .control i {
+    width: 10px;
+    height: 10px;
+    background: white;
+    display: block;
+    margin: auto;
+    padding: 1px 0;
+}
