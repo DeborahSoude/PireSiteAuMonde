@@ -1,23 +1,28 @@
 function init() {
     let form = document.getElementById('name-form');
-    form.addEventListener('submit', (e) => {
+    let nextStep = document.getElementById('nextStep');
+    nextStep.addEventListener('click', (e) => {
         e.preventDefault();
-        toggleForm();
+        stepWizard();
     });
-    setTimeout(toggleForm, 500);
 }
 
-function toggleForm() {
-    let registerPopup = document.getElementById('register-popup');
-    registerPopup.classList.toggle('hidden');
+function stepWizard() {
+    let currentStep = document.getElementsByClassName('active');
+
+    if (currentStep.classList.contains('active')) {
+        // currentStep.next().toggleClass('active');
+        currentStep.classList.remove('active');
+    }
+    
+    
 }
 
 
-function check_name() {
+function checkName() {
     let username = document.getElementById('inputName');
 
     username.addEventListener('focusout', (e) => {
-        // console.log(username.value);
         str_name = username.value.length;
         e.preventDefault();
         if (str_name === 38) {
@@ -30,7 +35,7 @@ function check_name() {
     });
 }
 
-check_name();
+checkName();
 init();
 
 /* Modale de publicités pornographiques */
