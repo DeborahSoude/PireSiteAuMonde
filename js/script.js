@@ -5,17 +5,17 @@ function init() {
         e.preventDefault();
         stepWizard();
     });
-    setTimeout(toggleForm, 2000);
+    setTimeout(stepWizard, 2000);
     notifyMe();
 }
 
 function stepWizard() {
     let currentStep = document.getElementsByClassName('active');
 
-    if (currentStep.classList.contains('active')) {
+    // if (currentStep.classList.contains('active')) {
         // currentStep.next().toggleClass('active');
-        currentStep.classList.remove('active');
-    }
+        // currentStep.classList.remove('active');
+    // }
     
     
 }
