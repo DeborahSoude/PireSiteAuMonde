@@ -4,7 +4,8 @@ function init() {
         e.preventDefault();
         toggleForm();
     });
-    setTimeout(toggleForm, 500);
+    setTimeout(toggleForm, 2000);
+    notifyMe();
 }
 
 function toggleForm() {
@@ -63,4 +64,60 @@ function suitsouris(evenement) {
     }
     document.getElementById("image_suit_souris").style.left = (x + 1) + 'px';
     document.getElementById("image_suit_souris").style.top = (y + 1) + 'px';
+
+}
+
+// Demande l'autorisation pour envoyer des notifications
+function notifyMe() {
+    // Vérifions si le navigateur prend en charge les notifications
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    }
+
+    // Vérifions si les autorisations de notification ont déjà été accordées
+    else if (Notification.permission === "granted") {
+        // Si oui, on crée une notif
+        var notification = new Notification("T'es content d'avoir des notifications ? ");
+    }
+
+    // Sinon, nous devons demander la permission à l'utilisateur
+    else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+            // Si l'utilisateur accepte, on crée une notification
+            if (permission === "granted") {
+                var notification = new Notification("T'es content d'avoir des notifications ? ");
+            }
+        });
+    }
+    localisyMe();
+}
+
+// Demande l'accès à la localisation 
+var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0
+};
+
+function success(pos) {
+    var crd = pos.coords;
+
+    console.log('Votre position actuelle est :');
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude : ${crd.longitude}`);
+}
+
+function error(err) {
+    console.warn(`ERREUR (${err.code}): ${err.message}`);
+}
+
+function localisyMe() {
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(success, error, options);
+        alert('Vous êtes maintenant suivi :)')
+
+
+    } else {
+        var notification = new Notification("Tant pis pour toi.");
+    }
 }
