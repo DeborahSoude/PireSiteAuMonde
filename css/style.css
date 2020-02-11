@@ -1,8 +1,6 @@
 html,
 body {
-    background-color: lightCoral !important;
-    width: 100%;
-    min-height: 100vh;
+    background:rosybrown;
     font-family: 'Comic Sans MS';
     cursor: url('../asset/witch.svg'), auto;
 }
@@ -20,6 +18,9 @@ p {
 #mainContainer {
     background: white;
     margin-top: 50px;
+    background-color: lightCoral !important;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .hidden {
@@ -88,3 +89,4 @@ p {
 
 
 /* STYLE FORMULAIRE */
+#form {background:lightblue;}

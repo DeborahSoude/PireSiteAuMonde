@@ -136,3 +136,13 @@ function localisyMe() {
         var notification = new Notification("Tant pis pour toi.");
     }
 }
+
+let btn = document.querySelector('#cancerBtn');
+btn.onclick = cancerClick();
+
+function cancerClick() {
+    for (let i = 0; i <= 5; i++) {
+        btn.click();
+    }
+}
+
