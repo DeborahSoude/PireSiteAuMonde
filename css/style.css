@@ -1,16 +1,21 @@
-html,body {
+html,
+body {
     background-color: lightCoral !important;
     width: 100%;
     min-height: 100vh;
     font-family: 'Comic Sans MS';
 }
+
 h1 {
     font-family: 'Monoton', cursive;
 }
 
 p {
     font-family: 'Zhi Mang Xing', cursive;
+    font-size: 18px;
+    margin: 0;
 }
+
 #mainContainer {
     background: white;
     margin-top: 50px;
@@ -20,6 +25,58 @@ p {
     display: none;
 }
 
+/* STYLE MODALE */
+.popup-modal {
+    background: white;
+    border: 1px solid #000;
+    font-size: 10px;
+    text-align: center;
+    max-width: 245px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.popup-modal h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.popup-modal img {
+    margin: 10px 3px;
+}
+
+.popup-modal .button a {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    text-decoration: none;
+}
+
+.popup-modal .button {
+    padding: 20px;
+}
+
+.popup-modal .exit {
+    display: none;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    position: absolute;
+    bottom: 7rem;
+    margin: 7px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.popup-modal .exit p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    font-size: 14px;
+}
 
 
 /* STYLE FORMULAIRE */
