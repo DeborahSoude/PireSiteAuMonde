@@ -81,13 +81,6 @@
       <span class="step"></span>
     </div>
 
-<button type="button" id="cancerBtn" onclick="cancerClick();">
-  <a href="http://localhost:8080/PireSiteAuMonde/" id="cancerBtn" type="button">
-    Clique moi et vis ta meilleure vie
-  </a>
-</button>
-    
-
     <div class="form-popup">
       <h1>On s'en fout</h1>
       <p>Merci d'avoir rempli, mais on s'en fout</p>
@@ -97,22 +90,19 @@
   </form>
 
   <main id="mainContainer" class="container" role="main">
+
+    <!-- Dupplique x fois le site dans un nouvel onglet -->
+    <button type="button" id="cancerBtn" onclick="cancerClick();">
+      <a href="http://localhost:8080/PireSiteAuMonde/" id="cancerBtn" type="button">
+        Clique moi et vis ta meilleure vie
+      </a>
+    </button>
+
+    <!-- Compteur de visites -->
     <div class="visit-box">
       <h3><span id="visit-count"></span>
         visites aujourd'hui</h3>
     </div>
-    <!-- <div class="form-group">
-      <label for="inputMail">Adresse mail</label>
-      <input type="email" class="form-control" id="inputMail" placeholder="Mail">
-    </div>
-    <div class="form-group">
-      <label for="inputConfirmMail">Confirmation adresse mail</label>
-      <input type="email" class="form-control" id="inputConfirmMail" placeholder="Confirmation mail">
-    </div>
-    <div class="form-group">
-      <label for="inputDogName">Nom de ton chien</label>
-      <input type="text" class="form-control" id="inputDogName" placeholder="Nom de ton chien">
-    </div> -->
 
 
     <!-- Musique -->
@@ -123,59 +113,44 @@
       <button class="control stop"><i></i></button>
     </div>
 
-    <!-- <div class="popup-modal" data-popup-modal="one"> -->
-      <!-- <p id="close"
+    <!-- Modal de publicité -->
+    <div class="popup-modal" data-popup-modal="one">
+      <p id="close"
         style="padding: 5px; text-align: right; font-weight: bold; font-size: 20px; font-family:Arial, Helvetica, sans-serif">
         X</p>
       <div align="center">
         <a href="#"><img src="http://media.thumbs-share.com/thumbs/p/O/m/pOmEUZh7OHo.jpg"></a>
-      </div> -->
-     
+      </div>
+      <div>
+        <p style=" font-weight: bold;">Catia</p>
+        <p>18 ans</p>
+        <p style="color: #FB0509; font-weight: bold;">Rouen</p>
+      </div>
 
+      <p>Je suis chaude, viens là que je te réchauffe</p>
 
-      <!-- Modal de publicité -->
-      <div class="popup-modal" data-popup-modal="one">
-        <p id="close"
-          style="padding: 5px; text-align: right; font-weight: bold; font-size: 20px; font-family:Arial, Helvetica, sans-serif">
-          X</p>
-        <div align="center">
-          <a href="#"><img src="http://media.thumbs-share.com/thumbs/p/O/m/pOmEUZh7OHo.jpg"></a>
-        </div>
+      <div class="button" align="center"><br>
+        <a href="http://www.chaudesaucul.com">♥ LA PÊCHO</a>
+      </div>
 
-
+      <div class="exit">
+        <p>Êtes-vous sûr de vouloir laisser passer cette chance ? </p>
         <div>
-          <p style=" font-weight: bold;">Catia</p>
-          <p>18 ans</p>
-          <p style="color: #FB0509; font-weight: bold;">Rouen</p>
-        </div>
-
-        <p>Je suis chaude, viens là que je te réchauffe</p>
-
-        <div class="button" align="center"><br>
-          <a href="http://www.chaudesaucul.com">♥ LA PÊCHO</a>
-        </div>
-
-
-
-
-        <div class="exit">
-          <p>Êtes-vous sûr de vouloir laisser passer cette chance ? </p>
-          <div>
-            <button type="button" class="no">Non</button>
-            <button type="button" class="yes">Oui</button>
-          </div>
+          <button type="button" class="no">Non</button>
+          <button type="button" class="yes">Oui</button>
         </div>
       </div>
+    </div>
 
 
 
-      <!-- Modal d'upload d'image -->
-      <div class="popup-upload">
-        <p>Photo de profil</p>
-        <img src="" alt="" id="preview-upload">
-        <input type="file" class="custom-file-input" id="upload-img" name="upload-img" accept="image/png, image/jpg"
-          onchange="showPreview(this)">
-      </div>
+    <!-- Modal d'upload d'image -->
+    <div class="popup-upload">
+      <p>Photo de profil</p>
+      <img src="" alt="" id="preview-upload">
+      <input type="file" class="custom-file-input" id="upload-img" name="upload-img" accept="image/png, image/jpg"
+        onchange="showPreview(this)">
+    </div>
   </main>
 
 
