@@ -4,8 +4,8 @@ function init() {
         nbVisits++;
         localStorage.setItem('nbvisits', nbVisits);
 
-        let spanCounter = document.getElementById('#visit-count');
-        // spanCounter.innerHTML += nbVisists;
+        let spanCounter = document.getElementById('visit-count');
+        spanCounter.innerText = nbVisits;
     });
 
     let form = document.getElementById('name-form');
@@ -15,7 +15,7 @@ function init() {
         stepWizard();
     });
     setTimeout(stepWizard, 2000);
-    // notifyMe();
+    notifyMe();
     window.addEventListener("beforeunload", function (event) {
         event.preventDefault();
         event.returnValue = "";
@@ -131,7 +131,7 @@ function openModal() {
 }
 
 function openNewModale() {
-    document.querySelector('.exit').style.display = "block"
+    document.querySelector('.exit').style.display = "block";
     document.querySelector('.no').addEventListener("click", function () {
         document.querySelector('.exit').style.display = "none";
     });
