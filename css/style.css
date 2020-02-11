@@ -1,8 +1,9 @@
 html,
 body {
-    background: rosybrown;
+    background-image: url('https://resize-parismatch.lanmedia.fr/r/901,,forcex/img/var/news/storage/images/paris-match/actu/environnement/les-photos-d-animaux-les-plus-droles-de-2019-1656260/harry-walker-oh-my-00000657/27020318-1-fre-FR/Harry-Walker-Oh-My-00000657.jpg');
     font-family: 'Comic Sans MS';
     cursor: url('../asset/witch.svg'), auto;
+    height: 100vh;
 }
 
 h1 {
@@ -15,13 +16,6 @@ p {
     margin: 0;
 }
 
-#mainContainer {
-    background: white;
-    margin-top: 50px;
-    background-color: lightCoral !important;
-    width: 100%;
-    min-height: 100vh;
-}
 
 .hidden {
     display: none;
@@ -189,14 +183,91 @@ nav ul li:hover {
 }
 
 /* STYLE FORMULAIRE */
-#form {
-    background: lightblue;
+#regForm {
+    background-color: violet;
+    margin: 100px auto;
+    padding: 40px;
+    width: 500px;
+    min-width: 300px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+
+.tab {
+    display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: white;
+}
+
+.form-popup {
+    background: violet;
+    color: white;
+    border: 1px solid #000;
+    font-size: 10px;
+    text-align: center;
+    max-width: 350px;
+    max-height: 250px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: none;
+}
+
+.form-popup p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-popup .ahOk {
+    border: 1px solid white;
+    padding: 5px;
+    margin: 15px 0;
+    max-width: 200px;
+    margin: 15px auto;
+}
+
+.form-popup .ahOk:hover {
+    background: white;
+    color: violet;
 }
 
 
 /*MODALE DE SON*/
 .popup-music {
-    background: green;
+    background: rosybrown;
     border: 2px solid #000;
     max-width: 100px;
     padding: 5px;
