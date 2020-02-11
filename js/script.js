@@ -95,16 +95,17 @@ function notifyMe() {
 // Demande l'accès à la localisation 
 var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 2000,
     maximumAge: 0
 };
 
 function success(pos) {
     var crd = pos.coords;
 
-    console.log('Votre position actuelle est :');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude : ${crd.longitude}`);
+    console.info('Votre position actuelle est :');
+    console.info(`Latitude : ${crd.latitude}`);
+    console.info(`Longitude : ${crd.longitude}`);
+    var notification = new Notification(`Ta position actuelle est Latitude : ${crd.latitude}, Longitude : ${crd.longitude}`)
 }
 
 function error(err) {
