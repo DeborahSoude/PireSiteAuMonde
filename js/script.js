@@ -269,3 +269,19 @@ document.querySelector('.ok').addEventListener('click', function () {
 document.querySelector('.thanks').addEventListener('click', function () {
     document.querySelector('.nav-popup-yet').style.display = "none";
 })
+
+/* Texte qui défile */
+var position = 0;
+var msg = "LE PIRE C'EST ICI !! ";
+var msg = "     " + msg;
+var longue = msg.length;
+var fois = (150 / msg.length) + 1;
+for (i = 0; i <= fois; i++) msg += msg;
+
+function textdefil() {
+    document.form1.deftext.value = msg.substring(position, position + 150);
+    position++;
+    if (position == longue) position = 0;
+    setTimeout("textdefil()", 60);
+}
+window.onload = textdefil;

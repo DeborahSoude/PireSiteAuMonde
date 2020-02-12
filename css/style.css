@@ -307,10 +307,21 @@ input.invalid {
     border: 3px solid red;
     padding: 15px;
     position: absolute;
-    top: 4rem;
+    top: 6rem;
     left: 0;
 }
 
 .popup-bestLife img {
     max-width: 180px;
+}
+
+/* TEXTE QUI DEFILE */
+.text-defilment input {
+    color: white;
+    padding: 30px;
+    font-size: 23px;
+    font-family: Raleway;
+    background: blue;
+    font-weight: 700;
+    max-width: 96%;
 }
