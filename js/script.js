@@ -269,3 +269,20 @@ document.querySelector('.ok').addEventListener('click', function () {
 document.querySelector('.thanks').addEventListener('click', function () {
     document.querySelector('.nav-popup-yet').style.display = "none";
 })
+
+
+// BOUTON QUI BOUGE AU SURVOL
+let movingBtn = document.getElementById('movingBtn');
+let vh = window.innerHeight;
+let vw = window.innerWidth;
+
+movingBtn.addEventListener('mouseenter', (e) => {
+    let newTop = getRandomInt(vh);
+    e.target.style.top = parseInt(newTop) + 'px';
+    let newWidth = getRandomInt(vw);
+    e.target.style.left = parseInt(newWidth) + 'px';
+});
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
