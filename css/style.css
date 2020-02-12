@@ -71,6 +71,7 @@ nav ul li:hover {
     margin: auto;
     padding: 15px;
     text-align: center;
+    z-index: 1;
 }
 
 .nav-popup p,
