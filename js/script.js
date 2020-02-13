@@ -141,6 +141,12 @@ function openNewModale() {
     });
 }
 
+document.querySelector('#close-win').addEventListener("click", function () {
+    document.querySelector('.popup-modal-win').style.display = "none";
+    setTimeout(openModal, 1500);
+});
+
+
 /*Personaliser le curseur*/
 document.onmousemove = suitsouris;
 

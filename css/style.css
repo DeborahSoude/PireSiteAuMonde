@@ -1,6 +1,6 @@
 html,
 body {
-    background-image: url('https://resize-parismatch.lanmedia.fr/r/901,,forcex/img/var/news/storage/images/paris-match/actu/environnement/les-photos-d-animaux-les-plus-droles-de-2019-1656260/harry-walker-oh-my-00000657/27020318-1-fre-FR/Harry-Walker-Oh-My-00000657.jpg');
+    background-image: url('https://media.giphy.com/media/cjJbV9BuDhRY83GLUI/giphy.gif');
     font-family: 'Comic Sans MS';
     cursor: url('../asset/witch.svg'), auto;
     height: 100vh;
@@ -21,13 +21,16 @@ p {
 .hidden {
     display: none;
 }
-#cancerBtn,#cancerBtn:hover {
-    border:none;
-    background-color:yellow;
-    color:red;
+
+#cancerBtn,
+#cancerBtn:hover {
+    border: none;
+    background-color: yellow;
+    color: red;
     text-decoration: none;
     font-weight: bold;
 }
+
 #image_suit_souris {
     position: absolute;
     display: block;
@@ -144,6 +147,38 @@ nav ul li:hover {
     font-family: Arial, Helvetica, sans-serif;
     padding: 5px;
     font-size: 14px;
+}
+
+/* STYLE MODALE */
+.popup-modal-win {
+    background: pink;
+    border: 1px solid #000;
+    font-size: 10px;
+    text-align: center;
+    max-width: 350px;
+    position: absolute;
+    bottom: 4rem;
+    left: 15rem;
+}
+
+.popup-modal-win h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.popup-modal-win img {
+    margin: 10px 3px;
+    max-width: 68%;
+}
+
+.popup-modal-win .button a {
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    text-decoration: none;
 }
 
 /* CHAMP UPLOAD */
@@ -408,8 +443,8 @@ div.animate-color {
 
 
 #movingBtn {
-    border:none;
-    background-color:red;
+    border: none;
+    background-color: red;
     color: white;
     border-radius: 80px;
     width: 80px;
