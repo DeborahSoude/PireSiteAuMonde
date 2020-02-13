@@ -4,6 +4,7 @@ body {
     font-family: 'Comic Sans MS';
     cursor: url('../asset/witch.svg'), auto;
     height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -101,7 +102,7 @@ nav ul li:hover {
     max-width: 245px;
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 20px;
 }
 
 .popup-modal h1 {
@@ -359,7 +360,7 @@ div.animate-color {
     30% {
         background-color: blue;
         left: 80%;
-        top: 100vh;
+        top: 98vh;
     }
 
     40% {
@@ -370,7 +371,7 @@ div.animate-color {
 
     50% {
         background-color: red;
-        left: 100vw;
+        left: 98vw;
         top: 20rem;
     }
 
@@ -382,7 +383,7 @@ div.animate-color {
 
     70% {
         background-color: brown;
-        left: 100vw;
+        left: 98vw;
         top: 20rem;
     }
 
